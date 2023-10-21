@@ -22,14 +22,18 @@ local keys = {
    { key = 'f', mods = mod.SUPER, action = act.Search({ CaseInSensitiveString = '' }) },
 
    -- copy/paste --
-   { key = 'c', mods = 'CTRL|SHIFT', action = act.CopyTo('Clipboard') },
-   { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom('Clipboard') },
+   -- { key = 'c', mods = 'CTRL|SHIFT', action = act.CopyTo('Clipboard') },
+   -- { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom('Clipboard') },
+   { key = 'c', mods = 'ALT', action = act.CopyTo('Clipboard') },
+   { key = 'v', mods = 'ALT', action = act.PasteFrom('Clipboard') },
 
    -- tabs --
    -- tabs: spawn+close
-   { key = 't', mods = mod.SUPER, action = act.SpawnTab('DefaultDomain') },
+   -- { key = 't', mods = mod.SUPER, action = act.SpawnTab('DefaultDomain') },
+   { key = 't', mods = 'ALT', action = act.SpawnTab('DefaultDomain') },
    { key = 't', mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = 'WSL:Ubuntu' }) },
-   { key = 'w', mods = mod.SUPER_REV, action = act.CloseCurrentTab({ confirm = false }) },
+   -- { key = 'w', mods = mod.SUPER_REV, action = act.CloseCurrentTab({ confirm = false }) },
+   { key = 'w', mods = 'ALT', action = act.CloseCurrentTab({ confirm = false }) },
 
    -- tabs: navigation
    { key = '[', mods = mod.SUPER, action = act.ActivateTabRelative(-1) },
@@ -37,9 +41,21 @@ local keys = {
    { key = '[', mods = mod.SUPER_REV, action = act.MoveTabRelative(-1) },
    { key = ']', mods = mod.SUPER_REV, action = act.MoveTabRelative(1) },
 
+   { key = 'z', mods = 'CMD', action = 'TogglePaneZoomState' },
+   { key = '1', mods = 'ALT', action = wezterm.action {  ActivateTab = 0 } },
+   { key = '2', mods = 'ALT', action = wezterm.action {  ActivateTab = 1 } },
+   { key = '3', mods = 'ALT', action = wezterm.action {  ActivateTab = 2 } },
+   { key = '4', mods = 'ALT', action = wezterm.action {  ActivateTab = 3 } },
+   { key = '5', mods = 'ALT', action = wezterm.action {  ActivateTab = 4 } },
+   { key = '6', mods = 'ALT', action = wezterm.action {  ActivateTab = 5 } },
+   { key = '7', mods = 'ALT', action = wezterm.action {  ActivateTab = 6 } },
+   { key = '8', mods = 'ALT', action = wezterm.action {  ActivateTab = 7 } },
+   { key = '9', mods = 'ALT', action = wezterm.action {  ActivateTab = 8 } },
+
    -- window --
    -- spawn windows
-   { key = 'n', mods = mod.SUPER, action = act.SpawnWindow },
+   -- { key = 'n', mods = mod.SUPER, action = act.SpawnWindow },
+   { key = 'n', mods = 'ALT', action = act.SpawnWindow },
 
    -- panes --
    -- panes: split panes
@@ -59,10 +75,10 @@ local keys = {
    { key = 'w', mods = mod.SUPER, action = act.CloseCurrentPane({ confirm = false }) },
 
    -- panes: navigation
-   { key = 'k', mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Up') },
-   { key = 'j', mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Down') },
-   { key = 'h', mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Left') },
-   { key = 'l', mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Right') },
+   -- { key = 'k', mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Up') },
+   -- { key = 'j', mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Down') },
+   -- { key = 'h', mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Left') },
+   -- { key = 'l', mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Right') },
 
    -- key-tables --
    -- resizes fonts

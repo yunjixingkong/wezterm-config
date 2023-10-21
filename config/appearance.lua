@@ -12,10 +12,11 @@ return {
    colors = colors,
 
    -- background
+   window_background_image = wezterm.config_dir .. '/backdrops/space.jpg',
    background = {
-      {
-         source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
-      },
+      -- {
+      --    source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
+      -- },
       {
          source = { Color = colors.background },
          height = '100%',
