@@ -19,7 +19,8 @@ local keys = {
    { key = 'F3', mods = 'NONE', action = act.ShowLauncher },
    { key = 'F4', mods = 'NONE', action = act.ShowTabNavigator },
    { key = 'F12', mods = 'NONE', action = act.ShowDebugOverlay },
-   { key = 'f', mods = mod.SUPER, action = act.Search({ CaseInSensitiveString = '' }) },
+   -- { key = 'f', mods = mod.SUPER, action = act.Search({ CaseInSensitiveString = '' }) },
+   { key = 'f', mods = 'CTRL', action = act.Search({ CaseInSensitiveString = '' }) },
 
    -- copy/paste --
    -- { key = 'c', mods = 'CTRL|SHIFT', action = act.CopyTo('Clipboard') },
