@@ -9,10 +9,14 @@ return {
    webgpu_power_preference = 'HighPerformance',
 
    -- color scheme
-   colors = colors,
+   -- 自定义颜色
+   -- colors = colors,
+   -- 内置颜色模板
+   -- color_scheme = 'Github Dark',
+   color_scheme = 'SpaceGray',
 
    -- background
-   window_background_image = wezterm.config_dir .. '/backdrops/space.jpg',
+   -- window_background_image = wezterm.config_dir .. '/backdrops/space.jpg',
    background = {
       -- {
       --    source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
@@ -33,7 +37,7 @@ return {
    hide_tab_bar_if_only_one_tab = false,
    use_fancy_tab_bar = false,
    tab_max_width = 25,
-   show_tab_index_in_tab_bar = false,
+   show_tab_index_in_tab_bar = true,
    switch_to_last_active_tab_when_closing_tab = true,
 
    -- window

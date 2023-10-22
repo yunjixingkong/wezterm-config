@@ -18,10 +18,6 @@ end
 ---@return Config
 function Config:append(new_options)
    for k, v in pairs(new_options) do
-         wezterm.log_info(
-            'Config: ',
-            { old = self.options, new = new_options[k] }
-         )
       if self.options[k] ~= nil then
          wezterm.log_warn(
             'Duplicate config option detected: ',
